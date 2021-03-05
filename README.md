@@ -5,11 +5,11 @@
 ## Description
 This is a pizza delivery website that allows a user to choose the type of pizza and adds the selected ones in a shopping cart. The total is calculated and the user is prompted to say if they want a delivery, in which case they are asked for their address.This is the fourth IP.
 ## Live site
-(https://alvynah.github.io/delani-studio/) 
+(https://alvynah.github.io/pizza-grub/) 
  
 ## Project Setup Instructions
 * Open Terminal {Ctrl+Alt+T}
-* git clone https://github.com/alvynah/delani-studio.git
+* git clone https://github.com/alvynah/pizza-grub.git
 * cd delani-studio
 * code .(for Vs Code) or atom .(for Atom)
 
@@ -31,4 +31,4 @@ This is a pizza delivery website that allows a user to choose the type of pizza 
 ## Contact Information
 For any further inquiries or contributions or comments, reach me at [Alvynah](juvatalvynah@gmail.com)
 ### License
- [MIT License]() Copyright (c) {2021} 
+ [MIT License](https://github.com/alvynah/pizza-grub/blob/master/License) Copyright (c) {2021} 
