@@ -1,15 +1,19 @@
 html,
-body,
-header,
-.landing {
+body {
     scroll-behavior: smooth;
-    overflow-x: hidden;
     height: 100vh;
     font-family: fantasy;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .landing {
     background-image: url(../images/assets/backgrouds/landingimage.jpg);
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -18,13 +22,14 @@ header,
 
 nav {
     border: 3px 3px black;
-    box-shadow: 0 0 10px 0 chocolate;
+    box-shadow: 0 0 10px 0 grey;
     position: relative;
 }
 
 nav h1 {
     color: chocolate;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 900;
 }
 
 nav img {
@@ -39,7 +44,6 @@ nav img {
     width: 0;
     position: fixed;
     z-index: 1;
-    margin-top: 1%;
     top: 0;
     left: 0;
     background-color: #111;
@@ -135,6 +139,29 @@ nav img {
 #mouse-click img {
     width: 50px;
     height: 100px;
+}
+
+#about {
+    background-color: white;
+    color: black;
+    min-height: 50vh;
+    border-top: 4px solid grey;
+    border-bottom: 4px solid chocolate;
+    border-radius: 20px;
+}
+
+#aboutExplain {
+    margin-top: 3%;
+    text-align: center;
+}
+
+#gif {
+    margin-top: 3%;
+    border-radius: 20px;
+}
+
+.textShadow {
+    text-shadow: 5px 5px 5px chocolate;
 }
 
 @keyframes bounce {
