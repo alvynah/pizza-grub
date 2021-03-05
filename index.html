@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pizza-Grub</title>
+    <link rel="icon" href="images/pizza.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -16,6 +17,23 @@
 </head>
 
 <body>
+    <header>
+        <div class="view landing" id="landing">
+            <nav class="navbar" id="navbar">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#about">About Us</a></li>
+                    <a href="#foodmenu">Pizza Menu</a>
+                    <a href="#order">Order</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <span class="menuIcon" onclick="openNav()">&#9776;</span>
+
+                <h1><img src="images/assets/pizza.png" alt="logo"> PIZZA GRUB</h1>
+            </nav>
+
+        </div>
+    </header>
     <script src="js/scripts.js"></script>
 </body>
 

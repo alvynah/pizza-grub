@@ -1,0 +1,86 @@
+html,
+body,
+header,
+.landing {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 100vh;
+    font-family: fantasy;
+}
+
+nav {
+    border: 3px 3px black;
+    box-shadow: 0 0 10px 0 chocolate;
+    position: relative;
+}
+
+nav h1 {
+    color: chocolate;
+    font-size: 30px;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 0 0 20px 0 chocolate;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    color: chocolate;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    text-decoration-line: underline;
+    text-decoration-color: chocolate;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.menuIcon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #f1f1f1;
+    font-family: fantasy;
+}
+
+.landing {
+    background-image: url(../images/assets/backgrouds/landingimage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
