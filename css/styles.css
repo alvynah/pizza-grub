@@ -96,6 +96,10 @@ nav img {
     color: #f1f1f1;
 }
 
+#heademphasis {
+    color: chocolate;
+}
+
 #head h5 {
     color: black;
     font-size: 50px;
@@ -118,7 +122,35 @@ nav img {
 }
 
 .btn:hover {
-    background: rgba(241, 91, 4, 0.836);
+    background: coral;
+}
+
+#mouse-click {
+    text-align: center;
+    font-size: 100px;
+    padding-top: 2.2%;
+    animation: bounce 5s infinite;
+}
+
+#mouse-click img {
+    width: 50px;
+    height: 100px;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-55px);
+    }
+    60% {
+        transform: translateY(-45px);
+    }
 }
 
 @media screen and (max-height: 450px) {
