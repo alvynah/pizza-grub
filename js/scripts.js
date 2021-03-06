@@ -1,7 +1,12 @@
-function openNav() {
-    document.getElementById("mySidenav").style.width = "150px";
-}
+//User Logic
+$(document).ready(function() {
+    jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000 // 2 seconds
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "150px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+});

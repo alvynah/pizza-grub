@@ -223,8 +223,25 @@ nav img {
     box-shadow: -18px 0 20px 0 chocolate;
 }
 
-#controls {
+.carousel-indicators li {
+    background: #111;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.carousel-inner .carousel-item {
+    transition: -webkit-transform 2s ease;
+    transition: transform 2s ease;
+    transition: transform 2s ease, -webkit-transform 2s ease;
+}
+
+#deluxecontrols {
     float: left;
+}
+
+#classiccontrols {
+    float: right;
 }
 
 .fas {

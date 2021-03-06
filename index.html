@@ -13,6 +13,9 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
 
@@ -121,23 +124,25 @@
 
         </div>
     </div>
-    <br style="clear:both">
-    <div class="container-fluid" id="deluxepizza">
-        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+    <br style="clear: both">
+    <div id="deluxepizza">
+        <div iv id="deluxe-pizza-items" class="carousel slide carousel-multi-item" data-ride="carousel">
 
             <!--Controls-->
-            <div class="controls-top" id="controls">
+            <div class="controls-top" id="deluxecontrols">
                 <h1><span id="heademphasis">DELUXE PIZZA</span>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+                    <a class="btn-floating" href="#deluxe-pizza-items" data-slide="prev"><i
+                        class="fas fa-chevron-left"></i></a>
+                    <a class="btn-floating" href="#deluxe-pizza-items" data-slide="next"><i
+                        class="fas fa-chevron-right"></i></a>
                 </h1>
             </div>
             <!--/.Controls-->
 
             <!--Indicators-->
             <ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
+                <li data-target="#deluxe-pizza-items" data-slide-to="0" class="active"></li>
+                <li data-target="#deluxe-pizza-items" data-slide-to="1"></li>
 
             </ol>
             <!--/.Indicators-->
@@ -253,21 +258,23 @@
     </div>
     <br style="clear: both">
     <div class="container-fluid" id="classicpizza">
-        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div id="classic-pizza-items" class="carousel slide carousel-multi-item" data-ride="carousel">
 
             <!--Controls-->
-            <div class="controls-top" id="controls">
+            <div class="controls-top" id="classiccontrols">
                 <h1><span id="heademphasis">CLASSIC PIZZA</span>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+                    <a class="btn-floating" href="#classic-pizza-items" data-slide="prev"><i
+                            class="fas fa-chevron-left"></i></a>
+                    <a class="btn-floating" href="#classic-pizza-items" data-slide="next"><i
+                            class="fas fa-chevron-right"></i></a>
                 </h1>
             </div>
             <!--/.Controls-->
 
             <!--Indicators-->
             <ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
+                <li data-target="#classic-pizza-items" data-slide-to="0" class="active"></li>
+                <li data-target="#classic-pizza-items" data-slide-to="1"></li>
 
             </ol>
             <!--/.Indicators-->
@@ -362,7 +369,8 @@
                             <img class="card-img-top" src="images/assets/pizzas/Deluxe/veg-feast.jpg" alt="Veg Feast">
                             <div class="card-body">
                                 <h4 class="card-title">Veg Tikka</h4>
-                                <p class="card-text">sweet corn, red and green pepper, mushroom, onion,jalapeno, tikka sauce</p>
+                                <p class="card-text">sweet corn, red and green pepper, mushroom, onion,jalapeno, tikka sauce
+                                </p>
                             </div>
                             <div class="card-footer">
 
@@ -381,8 +389,8 @@
         </div>
         <!--/.Carousel Wrapper-->
     </div>
-    <br style="clear: both">
 
+    <br style="clear: both">
     <script src="js/scripts.js"></script>
 </body>
 
