@@ -31,12 +31,15 @@ nav h1 {
     color: chocolate;
     font-size: 25px;
     font-weight: 900;
+    background-color: #111;
+    border-radius: 10px;
 }
 
 nav img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    background-color: chocolate;
 }
 
 .sidenav {
@@ -257,6 +260,12 @@ nav img {
     height: 450px;
 }
 
+.card-img-top:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
 .card-title {
     color: chocolate;
 }
@@ -264,6 +273,8 @@ nav img {
 .card-img-top {
     width: 100%;
     height: 200px;
+    transition: transform .2s;
+    margin: 0 auto;
 }
 
 .card-body {
