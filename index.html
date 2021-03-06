@@ -82,7 +82,6 @@
         <br>
         <div id="foodmenuContents">
             <h1><span id="heademphasis">Pizza Menu</span></h1>
-
             <h2>Pizza is sized in 4 different ways depending on the slices</h2>
             <p>The sizes are as follows</p>
             <div class="centerlist">
@@ -399,7 +398,175 @@
     <!-- /classic Pizza -->
     <br style="clear: both">
 
-    <script src="js/scripts.js"></script>
+    <div id="order">
+        <br>
+        <div id="orderContent">
+            <h1><span id="heademphasis">Order</span></h1>
+
+            <h2>Order now and Pizza will be delivered to your doorstep within the hour!</h2>
+            <div class="row">
+
+                <div class="col-md-6" id="deluxeOrder">
+                    <h3>Deluxe</h3>
+                    <p>Pizzas that have an extra special touch!</p>
+                </div>
+
+                <div class="col-md-6" id="classicOrder">
+                    <h3>Classic</h3>
+                    <p>Pizzas with a home touch!</p>
+                </div>
+
+            </div>
+            <!-- forms -->
+            <!-- Deluxe Pizza Form -->
+
+            <div class="col-sm-5">
+                <form id="deluxepizzaForm" action="">
+
+                    <label for="select">Select Your Flavor</label>
+                    <select class="browser-default custom-select custom-select-md mb-3 name" id="deluxepizzatype">
+                        <option value="Chicken and Beef Pepperoni">Chicken + Beef Pepperoni</option>
+                        <option value="Beef Pepperoni plus">Beef Pepperoni plus</option>
+                        <option value="Chicken Hawaian">Chicken Hawaian</option>
+                        <option value="Roast veg and Freeta">Roast veg and Freeta</option>
+                        <option value="Meat Deluxe">Meat Deluxe"</option>
+                        <option value="Spicy Borewores">Spicy Borewores</option>
+                        <option value="Veg Feast">Veg Feast</option>
+                    </select>
+
+                    <label for="select">Select Size</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="deluxesize">
+                        <option selected value="0">Select size here</option>
+                        <option value="Mega">Mega -- ksh. 1200</option>
+                        <option value="Large">Large -- ksh. 1000</option>
+                        <option value="Medium">Medium -- ksh. 800</option>
+                        <option value="Regular">Regular -- ksh. 550</option>
+                    </select>
+
+                    <label for="crust">Choose your favorite Crust!</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="deluxecrust">
+                        <option selected value="0">Select your preferred crust!</option>
+                        <option value="Crispy">Crispy -- ksh. 200</option>
+                        <option value="Stuffed">Stuffed -- ksh. 150</option>
+                        <option value="Gluten-free">Gluten-free-- ksh. 180</option>
+                    </select>
+                    <button type="submit" class="btn" name="btn-submit" id="deluxepizzatoppings-btn-submit">Extra toppings</button>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn" name="btn-submit" id="deluxepizza-btn-submit">Add to Cart</button>
+                </form>
+
+            </div>
+            <!-- /deluxe  -->
+
+            <!-- classic form -->
+            <div class="col-sm-5">
+                <form id="classicpizzaForm" action="">
+
+                    <label for="select">Select Your Flavor</label>
+                    <select class="browser-default custom-select custom-select-md mb-3 name" id="classicpizzatype">
+                        <option value="Chicken and Mushroom">Chicken + Mushroom</option>
+                        <option value="Chicken Tikka">Chicken Tikka</option>
+                        <option value="Peri-peri Chicken">Peri-peri chicken</option>
+                        <option value="Hawaian">Hawaian</option>
+                        <option value="BBQ Steak">BBQ Steak"</option>
+                        <option value="Borewores">Borewores</option>
+                        <option value="Veg Tikka">Veg Tikka</option>
+                     </select>
+
+                    <label for="select">Select Size</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="classicsize">
+                        <option selected value="0">Select size here</option>
+                        <option value="Mega">Mega -- ksh. 1100</option>
+                        <option value="Large">Large -- ksh. 900</option>
+                        <option value="Medium">Medium -- ksh. 700</option>
+                        <option value="Regular">Regular -- ksh. 500</option>
+                    </select>
+
+                    <label for="crust">Choose your favorite Crust!</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="classiccrust">
+                        <option selected value="0">Select your preferred crust!</option>
+                        <option value="Crispy">Crispy -- ksh. 200</option>
+                        <option value="Stuffed">Stuffed -- ksh. 150</option>
+                        <option value="Gluten-free">Gluten-free-- ksh. 180</option>
+                    </select>
+                    <button type="submit" class="btn" name="btn-submit" id="classicpizzatoppings-btn-submit">Extra toppings</button>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn" name="btn-submit" id="classicpizza-btn-submit">Add to Cart</button>
+
+                </form>
+            </div>
+            <!-- /classic pizza -->
+
+            <div class="col-sm-5">
+                <!-- toppings -->
+                <!-- megatoppings -->
+                <form id="megaToppings">
+                    <label for="mega">Select Extra Toppings at Ksh 250 only!</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="mega">
+                        <option selected value="0">Select extra toppings!</option>
+                        <option value="Bacon">Bacon</option>
+                        <option value="Extra Cheese">Extra Cheese</option>
+                        <option value="Sausages">Sausages</option>
+                        <option value="Extra Onions">Extra Onions</option>
+                        <option value="Extra Chicken">Extra Chicken</option>
+                     </select>
+                </form>
+                <!-- /megaToppings -->
+
+                <!-- largetoppings -->
+                <form id="largeToppings">
+                    <label for="large">Select Extra Toppings at Ksh 200 only!</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="large">
+                        <option selected value="0">Select extra toppings!</option>
+                        <option value="Bacon">Bacon</option>
+                        <option value="Extra Cheese">Extra Cheese</option>
+                        <option value="Sausages">Sausages</option>
+                        <option value="Extra Onions">Extra Onions</option>
+                        <option value="Extra Chicken">Extra Chicken</option>
+                     </select>
+                </form>
+                <!-- /largeToppings -->
+
+                <!-- mediumtoppings -->
+                <form id="mediumToppings">
+                    <label for="medium">Select Extra Toppings at Ksh 150 only!</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="medium">
+                        <option selected value="0">Select extra toppings!</option>
+                        <option value="Bacon">Bacon</option>
+                        <option value="Extra Cheese">Extra Cheese</option>
+                        <option value="Sausages">Sausages</option>
+                        <option value="Extra Onions">Extra Onions</option>
+                        <option value="Extra Chicken">Extra Chicken</option>
+                     </select>
+                </form>
+                <!-- /mediumToppings -->
+
+                <!-- regulartoppings -->
+                <form id="megaToppings">
+                    <label for="regular">Select Extra Toppings at Ksh 250 only!</label>
+                    <select class="browser-default custom-select custom-select-md mb-3" id="regular">
+                        <option selected value="0">Select extra toppings!</option>
+                        <option value="Bacon">Bacon</option>
+                        <option value="Extra Cheese">Extra Cheese</option>
+                        <option value="Sausages">Sausages</option>
+                        <option value="Extra Onions">Extra Onions</option>
+                        <option value="Extra Chicken">Extra Chicken</option>
+                     </select>
+                </form>
+                <!-- /regularToppings -->
+
+                <!-- /topping -->
+
+                <!-- /forms -->
+            </div>
+            <div class="col-sm-5">
+
+            </div>
+
+        </div>
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>

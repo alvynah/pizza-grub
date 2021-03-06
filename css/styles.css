@@ -285,6 +285,50 @@ nav img {
     height: 50px;
 }
 
+#order {
+    background-image: url(../images/assets/backgrouds/landingimage.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+    margin-top: 3%;
+}
+
+#order h2 {
+    text-align: center;
+}
+
+#orderContent {
+    margin-top: 3%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 20px;
+    padding-left: 3%;
+    color: white;
+}
+
+#deluxeOrder {
+    box-shadow: -15px 0 20px 0 grey;
+    cursor: pointer;
+}
+
+#classicOrder {
+    box-shadow: -18px 0 20px 0 chocolate;
+    cursor: pointer;
+}
+
+#deluxepizzaForm,
+#classicpizzaForm,
+#megaToppings,
+#largeToppings,
+#mediumToppings,
+#regularToppings {
+    display: none;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
