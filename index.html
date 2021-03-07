@@ -424,7 +424,7 @@
                 <form id="deluxepizzaForm" action="">
 
                     <label for="select">Select Your Flavor</label>
-                    <select class="browser-default custom-select custom-select-md mb-3 name" id="deluxepizzatype">
+                    <select class="browser-default custom-select custom-select-md mb-3 name" id="deluxepizzatype" required>
                         <option value="Chicken and Beef Pepperoni">Chicken + Beef Pepperoni</option>
                         <option value="Beef Pepperoni plus">Beef Pepperoni plus</option>
                         <option value="Chicken Hawaian">Chicken Hawaian</option>
@@ -435,7 +435,7 @@
                     </select>
 
                     <label for="select">Select Size</label>
-                    <select class="browser-default custom-select custom-select-md mb-3" id="deluxesize">
+                    <select class="browser-default custom-select custom-select-md mb-3" id="deluxesize" required>
                         <option selected value="0">Select size here</option>
                         <option value="Mega">Mega -- ksh. 1200</option>
                         <option value="Large">Large -- ksh. 1000</option>
@@ -444,7 +444,7 @@
                     </select>
 
                     <label for="crust">Choose your favorite Crust!</label>
-                    <select class="browser-default custom-select custom-select-md mb-3" id="deluxecrust">
+                    <select class="browser-default custom-select custom-select-md mb-3" id="deluxecrust" required>
                         <option selected value="0">Select your preferred crust!</option>
                         <option value="Crispy">Crispy -- ksh. 200</option>
                         <option value="Stuffed">Stuffed -- ksh. 150</option>
@@ -466,18 +466,18 @@
                 <form id="classicpizzaForm" action="">
 
                     <label for="select">Select Your Flavor</label>
-                    <select class="browser-default custom-select custom-select-md mb-3 name" id="classicpizzatype">
+                    <select class="browser-default custom-select custom-select-md mb-3 name" id="classicpizzatype" required>
                         <option value="Chicken and Mushroom">Chicken + Mushroom</option>
                         <option value="Chicken Tikka">Chicken Tikka</option>
                         <option value="Peri-peri Chicken">Peri-peri chicken</option>
                         <option value="Hawaian">Hawaian</option>
-                        <option value="BBQ Steak">BBQ Steak"</option>
+                        <option value="BBQ Steak">BBQ Steak</option>
                         <option value="Borewores">Borewores</option>
                         <option value="Veg Tikka">Veg Tikka</option>
                      </select>
 
                     <label for="select">Select Size</label>
-                    <select class="browser-default custom-select custom-select-md mb-3" id="classicsize">
+                    <select class="browser-default custom-select custom-select-md mb-3" id="classicsize" required>
                         <option selected value="0">Select size here</option>
                         <option value="Mega">Mega -- ksh. 1100</option>
                         <option value="Large">Large -- ksh. 900</option>
@@ -486,7 +486,7 @@
                     </select>
 
                     <label for="crust">Choose your favorite Crust!</label>
-                    <select class="browser-default custom-select custom-select-md mb-3" id="classiccrust">
+                    <select class="browser-default custom-select custom-select-md mb-3" id="classiccrust" required>
                         <option selected value="0">Select your preferred crust!</option>
                         <option value="Crispy">Crispy -- ksh. 200</option>
                         <option value="Stuffed">Stuffed -- ksh. 150</option>
@@ -536,9 +536,9 @@
                 <p id="addedprice">Delivery will cost ksh. 250</p>
                 <p id="finallmessage"></p>
             </div>
-            <button class="btn btn-orange addPizza">Add Pizza</button>
-            <button class="btn btn-orange" id="checkout">Checkout</button>
-            <button class="btn btn-orange deliver">Home delivery?</button>
+            <button class="btn addPizza">Add Pizza</button>
+            <button class="btn" id="checkout">Checkout</button>
+            <button class="btn deliver">Home delivery?</button>
         </div>
 
     </div>
