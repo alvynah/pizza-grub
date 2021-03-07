@@ -64,24 +64,40 @@ $(document).ready(function() {
         } else {
             $("#deluxetoppings").empty();
             alert("Select Pizza Size")
-        }
+        };
 
     });
+    $("#deluxepizza-btn-submit").click(function() {
+
+    });
+    $("#classicsize").change(function(event) {
+        event.preventDefault();
+        $("#classictoppings").hide();
+    })
     $("#classicpizzatoppings-btn-submit").click(function(event) {
         event.preventDefault();
         var selectedDeluxeSize = $("#classicsize option:selected").val();
+        $("#classictoppings").show();
 
 
         if (selectedDeluxeSize == "Mega") {
+            $("#classictoppings").empty();
             $("#classictoppings").append('<label for = "mega" >  Select Extra Toppings at Ksh 250 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="mega">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
         } else if (selectedDeluxeSize == "Large") {
+            $("#classictoppings").empty();
             $("#classictoppings").append('<label for = "large" >  Select Extra Toppings at Ksh 200 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="large">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
         } else if (selectedDeluxeSize == "Medium") {
+            $("#classictoppings").empty();
             $("#classictoppings").append('<label for = "medium" >  Select Extra Toppings at Ksh 150 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="medium">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
 
-        } else {
+        } else if (selectedDeluxeSize == "Regular") {
+            $("#classictoppings").empty();
             $("#classictoppings").append('<label for = "regular" >  Select Extra Toppings at Ksh 100 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="regular">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+        } else {
+            $("#classictoppings").empty();
+            alert("Select Pizza Size")
         };
+
 
     });
     $("button#deluxepizza-btn-submit").click(function(event) {
