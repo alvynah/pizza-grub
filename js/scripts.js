@@ -26,16 +26,13 @@ $(document).ready(function() {
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
     };
+    //deluxeorder
     $("#deluxeOrder").click(function() {
         $("#deluxeOrder").hide();
         $("#classicOrder").hide();
         $("#deluxepizzaForm").show();
     });
-    $("#classicOrder").click(function() {
-        $("#deluxeOrder").hide();
-        $("#classicOrder").hide();
-        $("#classicpizzaForm").show();
-    });
+
     $("#deluxesize").change(function(event) {
         event.preventDefault();
         $("#deluxetoppings").hide();
@@ -68,7 +65,65 @@ $(document).ready(function() {
 
     });
     $("#deluxepizza-btn-submit").click(function() {
+        var inputtedName = $("#deluxepizzatype option:selected").val();
+        var inputtedSize = $("#deluxesize option:selected").val();
+        var inputtedCrust = $("#deluxecrust option:selected").val();
 
+        switch (inputtedSize) {
+            case 0:
+                price = 0;
+                break;
+            case "Mega":
+                price = 1200;
+                console.log(price);
+                break;
+            case "Large":
+                price = 1000;
+                console.log(price);
+                break;
+            case "Medium":
+                price = 800;
+                console.log(price);
+                break;
+            case "small":
+                price = 550;
+                console.log(price);
+            default:
+                console.log("error");
+
+        }
+        switch (inputtedCrust) {
+            case "0":
+                crustPrice = 0;
+                break;
+            case "Crispy":
+                crustPrice = 200;
+                break;
+            case "Stuffed":
+                crustPrice = 250;
+                break;
+            case "Gluten-free":
+                crustPrice = 180;
+                break;
+            default:
+                console.log("No price");
+        }
+        if ((inputtedSize == "0") && (inputtedCrust == "0")) {
+            console.log("nothing selected");
+            $("div.ordersMade").hide();
+            alert("Please select pizza size and crust");
+        } else {
+            $("div.ordersMade").slideDown(1000);
+        }
+
+
+    });
+
+    //classic pizza
+    $("#classicOrder").click(function() {
+        $("#deluxeOrder").hide();
+        $("#classicOrder").hide();
+        $("#classicpizzaForm").show();
     });
     $("#classicsize").change(function(event) {
         event.preventDefault();
@@ -100,9 +155,6 @@ $(document).ready(function() {
 
 
     });
-    $("button#deluxepizza-btn-submit").click(function(event) {
-        event.preventDefault();
 
-    })
 
 });
