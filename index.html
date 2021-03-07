@@ -404,8 +404,8 @@
             <h1><span id="heademphasis">Order</span></h1>
 
             <h2>Order now and Pizza will be delivered to your doorstep within the hour!</h2>
+            <p style="text-align: center"><span id="heademphasis">Click to order pizza!</span></p>
             <div class="row">
-
                 <div class="col-md-6" id="deluxeOrder">
                     <h3>Deluxe</h3>
                     <p>Pizzas that have an extra special touch!</p>
@@ -453,9 +453,11 @@
                     <button type="submit" class="btn" name="btn-submit" id="deluxepizzatoppings-btn-submit">Extra toppings</button>
                     <br>
                     <br>
+                    <div id="deluxetoppings">
+
+                    </div>
                     <button type="submit" class="btn" name="btn-submit" id="deluxepizza-btn-submit">Add to Cart</button>
                 </form>
-
             </div>
             <!-- /deluxe  -->
 
@@ -493,80 +495,54 @@
                     <button type="submit" class="btn" name="btn-submit" id="classicpizzatoppings-btn-submit">Extra toppings</button>
                     <br>
                     <br>
+                    <div id="classictoppings">
+                    </div>
+
                     <button type="submit" class="btn" name="btn-submit" id="classicpizza-btn-submit">Add to Cart</button>
 
                 </form>
             </div>
             <!-- /classic pizza -->
 
-            <div class="col-sm-5">
-                <!-- toppings -->
-                <!-- megatoppings -->
-                <form id="megaToppings">
-                    <label for="mega">Select Extra Toppings at Ksh 250 only!</label>
-                    <select class="browser-default custom-select custom-select-md mb-3" id="mega">
-                        <option selected value="0">Select extra toppings!</option>
-                        <option value="Bacon">Bacon</option>
-                        <option value="Extra Cheese">Extra Cheese</option>
-                        <option value="Sausages">Sausages</option>
-                        <option value="Extra Onions">Extra Onions</option>
-                        <option value="Extra Chicken">Extra Chicken</option>
-                     </select>
-                </form>
-                <!-- /megaToppings -->
 
-                <!-- largetoppings -->
-                <form id="largeToppings">
-                    <label for="large">Select Extra Toppings at Ksh 200 only!</label>
-                    <select class="browser-default custom-select custom-select-md mb-3" id="large">
-                        <option selected value="0">Select extra toppings!</option>
-                        <option value="Bacon">Bacon</option>
-                        <option value="Extra Cheese">Extra Cheese</option>
-                        <option value="Sausages">Sausages</option>
-                        <option value="Extra Onions">Extra Onions</option>
-                        <option value="Extra Chicken">Extra Chicken</option>
-                     </select>
-                </form>
-                <!-- /largeToppings -->
 
-                <!-- mediumtoppings -->
-                <form id="mediumToppings">
-                    <label for="medium">Select Extra Toppings at Ksh 150 only!</label>
-                    <select class="browser-default custom-select custom-select-md mb-3" id="medium">
-                        <option selected value="0">Select extra toppings!</option>
-                        <option value="Bacon">Bacon</option>
-                        <option value="Extra Cheese">Extra Cheese</option>
-                        <option value="Sausages">Sausages</option>
-                        <option value="Extra Onions">Extra Onions</option>
-                        <option value="Extra Chicken">Extra Chicken</option>
-                     </select>
-                </form>
-                <!-- /mediumToppings -->
-
-                <!-- regulartoppings -->
-                <form id="megaToppings">
-                    <label for="regular">Select Extra Toppings at Ksh 250 only!</label>
-                    <select class="browser-default custom-select custom-select-md mb-3" id="regular">
-                        <option selected value="0">Select extra toppings!</option>
-                        <option value="Bacon">Bacon</option>
-                        <option value="Extra Cheese">Extra Cheese</option>
-                        <option value="Sausages">Sausages</option>
-                        <option value="Extra Onions">Extra Onions</option>
-                        <option value="Extra Chicken">Extra Chicken</option>
-                     </select>
-                </form>
-                <!-- /regularToppings -->
-
-                <!-- /topping -->
-
-                <!-- /forms -->
-            </div>
-            <div class="col-sm-5">
-
-            </div>
-
+            <!-- /forms -->
         </div>
-        <script src="js/scripts.js"></script>
+        <div class="ordersMade">
+            <h2>Your Order is:</h2>
+            <div id="your-orders">
+                <table class="table table-sm  pizzatable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Crust</th>
+                            <th scope="col">Topping</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersmade">
+                        <tr>
+                            <td id="pizzaname"></td>
+                            <td id="pizzasize"></td>
+                            <td id="pizzacrust"></td>
+                            <td id="pizzatopping"></td>
+                            <td id="totals"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="pizzatotal"></p>
+                <p id="totalbill"></p>
+                <p id="addedprice">Delivery will cost ksh. 250</p>
+                <p id="finallmessage"></p>
+            </div>
+            <button class="btn btn-orange addPizza">Add Pizza</button>
+            <button class="btn btn-orange" id="checkout">Checkout</button>
+            <button class="btn btn-orange deliver">Home delivery?</button>
+        </div>
+
+    </div>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

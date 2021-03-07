@@ -322,10 +322,12 @@ nav img {
 
 #deluxepizzaForm,
 #classicpizzaForm,
+.toppings,
 #megaToppings,
 #largeToppings,
 #mediumToppings,
-#regularToppings {
+#regularToppings,
+.ordersMade {
     display: none;
 }
 

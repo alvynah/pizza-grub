@@ -1,3 +1,20 @@
+//business Logic
+var price, crustPrice, toppingPrice;
+var total = 0;
+
+function OrderPizza(name, size, crust, total) {
+    this.name = name;
+    this.size = size;
+    this.crust = crust;
+    this.total = total;
+    this.toppings = [];
+
+}
+
+function ToppingPizza(topping) {
+    this.topping = topping;
+}
+
 //User Logic
 $(document).ready(function() {
     jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000 // 2 seconds
@@ -19,14 +36,40 @@ $(document).ready(function() {
         $("#classicOrder").hide();
         $("#classicpizzaForm").show();
     });
+
     $("#deluxepizzatoppings-btn-submit").click(function(event) {
         event.preventDefault();
-        $("#mediumToppings").show($("#deluxetoppings"));
+        var selectedDeluxeSize = $("#deluxesize option:selected").val();
+
+
+        if (selectedDeluxeSize == "Mega") {
+            $("#deluxetoppings").append('<label for = "mega" >  Select Extra Toppings at Ksh 250 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="mega">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+        } else if (selectedDeluxeSize == "Large") {
+            $("#deluxetoppings").append('<label for = "large" >  Select Extra Toppings at Ksh 200 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="large">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+        } else if (selectedDeluxeSize == "Medium") {
+            $("#deluxetoppings").append('<label for = "medium" >  Select Extra Toppings at Ksh 150 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="medium">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+
+        } else {
+            $("#deluxetoppings").append('<label for = "regular" >  Select Extra Toppings at Ksh 100 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="regular">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+        };
 
     });
     $("#classicpizzatoppings-btn-submit").click(function(event) {
         event.preventDefault();
-        $("#mediumToppings").show();
+        var selectedDeluxeSize = $("#classicsize option:selected").val();
+
+
+        if (selectedDeluxeSize == "Mega") {
+            $("#classictoppings").append('<label for = "mega" >  Select Extra Toppings at Ksh 250 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="mega">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+        } else if (selectedDeluxeSize == "Large") {
+            $("#classictoppings").append('<label for = "large" >  Select Extra Toppings at Ksh 200 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="large">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+        } else if (selectedDeluxeSize == "Medium") {
+            $("#classictoppings").append('<label for = "medium" >  Select Extra Toppings at Ksh 150 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="medium">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+
+        } else {
+            $("#classictoppings").append('<label for = "regular" >  Select Extra Toppings at Ksh 100 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3" id="regular">' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+        };
+
     });
 
 });
