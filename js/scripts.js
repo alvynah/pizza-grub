@@ -11,69 +11,68 @@ function OrderPizza(name, size, crust, topping, total) {
     this.total = total;
 
 };
-// //topping price
-// OrderPizza.prototype.getToppingPrice = function() {
-//     switch (this.size) {
-//         case "Mega":
-//             return 250
-//             break;
-//         case "Large":
-//             return 200
-//             break;
-//         case "Medium":
-//             return 150
-//             break;
-//         case "regular":
-//             return 100
-//             break;
-//         default:
-//             console.log(error);
-//     };
-// };
-// OrderPizza.prototype.getCrustprice = function() {
-//     switch (this.crust) {
-//         case "0":
-//             return 0;
-//             break;
-//         case "Crispy":
-//             return 200;
-//             break;
-//         case "Stuffed":
-//             return 250;
-//             break;
-//         case "Gluten-free":
-//             return 180;
-//             break;
-//         default:
-//             console.log("No price");
-//     };
-// };
-// orderPizza.prototype.getPizzaSizePrice = function() {
-//     switch (this.size) {
-//         case 0:
-//             return 0;
-//             break;
-//         case "Mega":
-//             return 1200;
-//             break;
-//         case "Large":
-//             return 1000;
-//             break;
-//         case "Medium":
-//             return 800;
-//             break;
-//         case "small":
-//             return 550;
-//         default:
-//             console.log("error");
+//topping price
+OrderPizza.prototype.getToppingPrice = function() {
+    switch (this.size) {
+        case "Mega":
+            return 250
+            break;
+        case "Large":
+            return 200
+            break;
+        case "Medium":
+            return 150
+            break;
+        case "regular":
+            return 100
+            break;
+        default:
+            return null;
+    };
+};
+OrderPizza.prototype.getCrustprice = function() {
+    switch (this.crust) {
+        case "0":
+            return 0;
+            break;
+        case "Crispy":
+            return 200;
+            break;
+        case "Stuffed":
+            return 250;
+            break;
+        case "Gluten-free":
+            return 180;
+            break;
+        default:
+            return null;
+    };
+};
+OrderPizza.prototype.getPizzaSizePrice = function() {
+    switch (this.size) {
+        case 0:
+            return 0;
+            break;
+        case "Mega":
+            return 1200;
+            break;
+        case "Large":
+            return 1000;
+            break;
+        case "Medium":
+            return 800;
+            break;
+        case "small":
+            return 550;
+        default:
+            return null;
+    };
+};
+//Get total pizza price
+OrderPizza.prototype.getPizzaPrice = function() {
 
-//     };
-// };
-// //Get total pizza price
-// Pizza.prototype.getPizzaPrice = function() {
-
-//     return (this.getCrustPrice() + this.getToppingPrice() + this.getPizzaSizePrice());
-// };
+    return (this.getToppingPrice() + this.getCrustprice() + this.getPizzaSizePrice());
+};
 
 
 //User Logic
@@ -125,7 +124,11 @@ $(document).ready(function() {
         };
 
     });
-    $("form#deluxepizzaForm").last().submit(function(event) {
+    let pizzaOrders = [];
+    let pizzaOrderPrices = [];
+
+
+    $("form#deluxepizzaForm").submit(function(event) {
         event.preventDefault();
 
         var inputtedName = $("#deluxepizzatype option:selected").val();
@@ -133,85 +136,81 @@ $(document).ready(function() {
         var inputtedCrust = $("#deluxecrust option:selected").val();
         var inputtedTopping = $("#deluxesize option:selected").val();
         var toppingName = $(".toppingsPizza option:Selected").val();
-
         // Validation
         if ((inputtedName == "0")) {
-            console.log("nothing selected");
             alert("Please select pizza name");
 
+            return false;
 
         } else if ((inputtedSize == "0")) {
-            console.log("nothing selected");
             alert("Please select pizza size");
-
+            return false;
 
         } else if ((inputtedCrust == "0")) {
-            console.log("nothing selected");
             alert("Please select pizza crust");
-
+            return false;
 
         } else if ((toppingName == "0")) {
-            console.log("nothing selected");
             alert("Please select pizza topping");
-
+            return false;
 
         } else {
             $("#ordersMade").show(1000);
         }
 
-        switch (inputtedSize) {
-            case 0:
-                price = 0;
-                break;
-            case "Mega":
-                price = 1200;
-                break;
-            case "Large":
-                price = 1000;
-                break;
-            case "Medium":
-                price = 800;
-                break;
-            case "small":
-                price = 550;
-            default:
-                console.log("error");
+        // switch (inputtedSize) {
+        //     case 0:
+        //         price = 0;
+        //         break;
+        //     case "Mega":
+        //         price = 1200;
+        //         break;
+        //     case "Large":
+        //         price = 1000;
+        //         break;
+        //     case "Medium":
+        //         price = 800;
+        //         break;
+        //     case "small":
+        //         price = 550;
+        //     default:
+        //         console.log("error");
 
-        }
-        switch (inputtedCrust) {
-            case "0":
-                crustPrice = 0;
-                break;
-            case "Crispy":
-                crustPrice = 200;
-                break;
-            case "Stuffed":
-                crustPrice = 250;
-                break;
-            case "Gluten-free":
-                crustPrice = 180;
-                break;
-            default:
-                console.log("No price");
-        }
-        switch (inputtedTopping) {
-            case 0:
-                toppingPrice = 0;
-                break;
-            case "Mega":
-                toppingPrice = 250;
-                break;
-            case "Large":
-                toppingPrice = 200;
-                break;
-            case "Medium":
-                toppingPrice = 150;
-                break;
-            case "small":
-                toppingPrice = 100;
-            default:
-                console.log("error");
-        }
+        // }
+        // switch (inputtedCrust) {
+        //     case "0":
+        //         crustPrice = 0;
+        //         break;
+        //     case "Crispy":
+        //         crustPrice = 200;
+        //         break;
+        //     case "Stuffed":
+        //         crustPrice = 250;
+        //         break;
+        //     case "Gluten-free":
+        //         crustPrice = 180;
+        //         break;
+        //     default:
+        //         console.log("No price");
+        // }
+        // switch (inputtedTopping) {
+        //     case 0:
+        //         toppingPrice = 0;
+        //         break;
+        //     case "Mega":
+        //         toppingPrice = 250;
+        //         break;
+        //     case "Large":
+        //         toppingPrice = 200;
+        //         break;
+        //     case "Medium":
+        //         toppingPrice = 150;
+        //         break;
+        //     case "small":
+        //         toppingPrice = 100;
+        //     default:
+        //         console.log("error");
+        // }
 
 
 
@@ -232,6 +231,10 @@ $(document).ready(function() {
 
 
         var newOrder = new OrderPizza(inputtedName, inputtedSize, inputtedCrust, toppingName, total);
+        pizzaOrders.push(newOrder);
+        pizzaOrderPrices.push(newOrder.checkoutTotal);
+        console.log(pizzaOrderPrices.reduce((a, b) => a + b, 0));
+
         // pizzaOrders.push(newOrder);
         // var resetOrders = () => {
         //     pizzaOrders = []
@@ -241,10 +244,10 @@ $(document).ready(function() {
         $("#ordersMadeTable").append(
             '<tr><td id="pizzaname">' +
             newOrder.name + '</td><td id="pizzasize">' +
-            newOrder.size + '</td><td id="pizzacrust">' +
-            newOrder.crust + '</td><td id="pizzatopping">' +
-            newOrder.topping + '</td><td id="totals">' +
-            newOrder.total +
+            newOrder.size + ' Ksh' + newOrder.getPizzaSizePrice() + '</td><td id="pizzacrust">' +
+            newOrder.crust + ' Ksh' + newOrder.getCrustprice() + '</td><td id="pizzatopping">' +
+            newOrder.topping + ' Ksh' + newOrder.getToppingPrice() + '</td><td id="totals">' +
+            'Ksh ' + newOrder.getPizzaPrice() +
             '</td></tr>');
 
 
@@ -261,6 +264,7 @@ $(document).ready(function() {
         $("button.addPizza").hide();
         $("button.deliver").show(1000);
         $("#addedprice").show(1000);
+
         console.log("Your total bills is sh. " + checkoutTotal);
         $("#pizzatotal").append("Your bill is sh. " + checkoutTotal);
     });
