@@ -103,7 +103,7 @@ $(document).ready(function() {
         event.preventDefault();
 
         var selectedDeluxeSize = $("#deluxesize option:selected").val();
-        $("#deluxetoppings").slideDown(1000);
+        $("#deluxetoppings").slideDown(100);
         if (selectedDeluxeSize == "Mega") {
 
             $("#deluxetoppings").empty();
