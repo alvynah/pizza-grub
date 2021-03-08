@@ -508,12 +508,12 @@
                     </div>
                     <div class="delivery">
                         <p id="heademphasis">Fill in the details for the delivery</p>
-                        <form method="POST">
-                            <div class="form-group">
-                                <input type="text" id="name" class="form-control mb-3" placeholder="Name">
-                                <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
-                                <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
-                                <button class="btn btn-orange" id="final-order">Place Order</button>
+                        <form id=contactform>
+                            <div class="form-group ">
+                                <input type="text" id="name" class="form-control mb-3" placeholder="Name" required>
+                                <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number" required>
+                                <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery" required>
+                                <button type="submit" class="btn btn-orange" id="final-order">Place Order</button>
                             </div>
                         </form>
                     </div>

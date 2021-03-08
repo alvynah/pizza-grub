@@ -218,7 +218,17 @@ $(document).ready(function() {
         $("#totalbill").append("Your bill plus delivery fee is: " + costWithDelivery);
     });
 
+    $("button#final-order").click(function(event) {
+        event.preventDefault();
+        var inputtedNameContact = $("#name").val();
+        var inputtedPhoneContact = $("#phone").val();
+        var inputtedLocationContact = $("#location").val();
 
+
+        alert("Hello " + (inputtedNameContact) + ".We have recieved your order and it will be delivered to at: " + (inputtedLocationContact) + " in the next one hour .Our rider will call you on Tel: " + (inputtedPhoneContact) + " as you provide. Enjoy the deliciousness!!");
+        console.log("run");
+        location.reload();
+    });
 
 
 });
