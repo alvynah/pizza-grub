@@ -121,8 +121,7 @@ $(document).ready(function() {
             $("#deluxetoppings").empty();
             $("#deluxetoppings").append('<label for = "regular" >  Select Extra Toppings at Ksh 100 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3 toppingsPizza"" id="regular" required>' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
         } else {
-            $("#deluxetoppings").empty();
-            alert("Select Pizza Size")
+            return false;
         };
 
     });
@@ -137,6 +136,7 @@ $(document).ready(function() {
         var inputtedSize = $("#deluxesize option:selected").val();
         var inputtedCrust = $("#deluxecrust option:selected").val();
         var inputtedTopping = $("#deluxesize option:selected").val();
+
         var toppingName = $(".toppingsPizza option:Selected").val();
         // Validation
         if ((inputtedName == "0")) {
