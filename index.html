@@ -26,6 +26,7 @@
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -415,24 +416,21 @@
         <div id="orderContent">
             <h1><span id="heademphasis">Order</span></h1>
 
-            <h2>Order now and Pizza will be delivered to your doorstep within the hour!</h2>
-            <p style="text-align: center"><span id="heademphasis">Click to order pizza!</span></p>
+            <h2 id="orderTitle">Order now and Pizza will be delivered to your doorstep within the hour!</h2>
+            <p style="text-align: center" id="clicktoOrder"><span id="heademphasis">Click to order pizza!</span></p>
             <div class="row">
                 <div class="col-md-10" id="deluxeOrder">
                     <h3>Deluxe</h3>
                     <p>Pizzas that have an extra special touch!</p>
                 </div>
 
-                <!-- <div class="col-md-6" id="classicOrder">
-                    <h3>Classic</h3>
-                    <p>Pizzas with a home touch!</p>
-                </div> -->
+
 
             </div>
             <!-- forms -->
             <!-- Deluxe Pizza Form -->
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                     <form id="deluxepizzaForm" method="POST">
 
                         <label for="select">Select Your Flavor</label>
@@ -442,7 +440,7 @@
                         <option value="Beef Pepperoni plus">Beef Pepperoni plus</option>
                         <option value="Chicken Hawaian">Chicken Hawaian</option>
                         <option value="Roast veg and Freeta">Roast veg and Freeta</option>
-                        <option value="Meat Deluxe">Meat Deluxe"</option>
+                        <option value="Meat Deluxe">Meat Deluxe</option>
                         <option value="Spicy Borewores">Spicy Borewores</option>
                         <option value="Veg Feast">Veg Feast</option>
                     </select>
@@ -520,11 +518,11 @@
 
                 <!-- /forms -->
 
-                <div class="col-sm-7 ordersMade" id="ordersMade">
+                <div class="col-sm-8 ordersMade" id="ordersMade">
                     <div class="container">
                         <h2>Your Order is:</h2>
                         <div id="your-orders">
-                            <table class="table table-sm  pizzatable">
+                            <table class="table table-sm  pizzacheckouttable">
                                 <thead>
                                     <tr>
                                         <th scope="col">Name</th>
@@ -546,7 +544,7 @@
                             </table>
 
                             <p id="pizzatotal"></p>
-                            <p id="totalbill"></p>
+                            <h1 id="totalbill"></h1>
                             <p id="addedprice">Delivery will cost ksh. 250</p>
                             <p id="finallmessage"></p>
                         </div>
@@ -555,6 +553,7 @@
                         <button class="btn deliver">Home delivery?</button>
                     </div>
                     <div class="delivery">
+                        <p id="heademphasis">Fill in the details for the delivery</p>
                         <form method="POST">
                             <div class="form-group">
                                 <input type="text" id="name" class="form-control mb-3" placeholder="Name">
@@ -568,7 +567,48 @@
             </div>
 
         </div>
+        <br>
     </div>
+    <br style="clear: both">
+
+
+    <div class="container-fluid bg-default" id="contact">
+        <div class="controls-top ">
+            <h2 id="heademphasis">Contact Us</h2>
+        </div>
+        <div class="row" id="contactdetails">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-3 text-justify">
+                <p><strong>Location</strong></p>
+                <p>Juja City Mall | Thika Road <br> 0000,Juja </p>
+            </div>
+            <div class="col-md-3">
+                <p><strong>Customer Care</strong></p>
+                <p>alvynaw@gmail.com <br>Phone: +254792833436</p>
+            </div>
+            <div class="col-md-4">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15956.236527270175!2d37.0089269!3d-1.1177451!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f46582986ccad%3A0x175241b54efb4106!2sJuja%20Preparatory%20School!5e0!3m2!1sen!2ske!4v1615231668599!5m2!1sen!2ske"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copyright " style="text-align:center ">
+                <p id="heademphasis">
+                    Copyright &copy 2021 All Rights Reserved,
+                    <a href="https://github.com/alvynah "><i class="fa fa-cloud "></i> ALVYNAH</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
     <script src="js/scripts.js"></script>
 </body>
 

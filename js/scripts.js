@@ -23,7 +23,7 @@ OrderPizza.prototype.getToppingPrice = function() {
         case "Medium":
             return 150
             break;
-        case "regular":
+        case "Regular":
             return 100
             break;
         default:
@@ -62,7 +62,7 @@ OrderPizza.prototype.getPizzaSizePrice = function() {
         case "Medium":
             return 800;
             break;
-        case "small":
+        case "Regular":
             return 550;
         default:
             return null;
@@ -90,7 +90,8 @@ $(document).ready(function() {
     $("#deluxeOrder").click(function() {
         $("#deluxeOrder").hide();
         $("#classicOrder").hide();
-        $("#deluxepizzaForm").show();
+        $("#clicktoOrder").hide();
+        $("#deluxepizzaForm").slideDown(1000);
     });
 
     $("#deluxesize").change(function(event) {
@@ -101,7 +102,7 @@ $(document).ready(function() {
         event.preventDefault();
 
         var selectedDeluxeSize = $("#deluxesize option:selected").val();
-        $("#deluxetoppings").show();
+        $("#deluxetoppings").slideDown(1000);
         if (selectedDeluxeSize == "Mega") {
 
             $("#deluxetoppings").empty();
@@ -155,30 +156,12 @@ $(document).ready(function() {
             return false;
 
         } else {
-            $("#ordersMade").show(1000);
+            $("#ordersMade").slideDown(1000);
         }
-
-
-
-
-
-        total = price + crustPrice + toppingPrice;
-        var checkoutTotal = 0;
-        checkoutTotal = checkoutTotal + total;
-        console.log(checkoutTotal);
-
-
-
         var newOrder = new OrderPizza(inputtedName, inputtedSize, inputtedCrust, toppingName, total);
         pizzaOrders.push(newOrder);
         pizzaOrderPrices.push(newOrder.getPizzaPrice());
         console.log(pizzaOrderPrices.reduce((a, b) => a + b, 0));
-
-        // pizzaOrders.push(newOrder);
-        // var resetOrders = () => {
-        //     pizzaOrders = []
-        //     $("#ordersMadeTable").empty()
-        // }
 
         $("#ordersMadeTable").append(
             '<tr><td id="pizzaname">' +
@@ -202,9 +185,9 @@ $(document).ready(function() {
         $("button#checkout").hide();
         $("button.addPizza").hide();
         $("form#deluxepizzaForm").hide();
-        $("button.deliver").show(1000);
-        $("button.collect").show(1000);
-        $("#addedprice").show(1000);
+        $("button.deliver").slideDown(1000);
+        $("button.collect").slideDown(1000);
+        $("#addedprice").slideDown(1000);
 
         totalCost = pizzaOrderPrices.reduce((a, b) => a + b, 0);
 
@@ -221,8 +204,19 @@ $(document).ready(function() {
         location.reload();
     });
     $("button.deliver").click(function() {
+        $(".pizzacheckouttable").hide();
+        $(".ordersMade h2").hide();
+        $("#addedprice").hide();
+        $("button.deliver").hide();
+        $("#pizzatotal").hide();
+        $("button.collect").hide();
+        $("#orderTitle").hide();
+        $(".delivery").slideDown(1000);
 
+        let costWithDelivery = totalCost + 250;
+        $("#totalbill").append("Your bill plus delivery fee is: " + costWithDelivery);
     });
+
     // //classic pizza
     // $("#classicOrder").click(function() {
     //     $("#deluxeOrder").hide();
