@@ -311,8 +311,10 @@ nav img {
 }
 
 #deluxeOrder {
-    box-shadow: -15px 0 20px 0 grey;
+    box-shadow: 0 0 20px 0 grey;
     cursor: pointer;
+    text-align: center;
+    margin-left: 3%;
 }
 
 #classicOrder {
@@ -326,7 +328,9 @@ nav img {
 #largeToppings,
 #mediumToppings,
 #regularToppings,
-.ordersMade {
+.ordersMade,
+.deliver,
+#addedprice {
     display: none;
 }
 
