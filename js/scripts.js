@@ -125,14 +125,39 @@ $(document).ready(function() {
         };
 
     });
-    $("form#deluxepizzaForm").submit(function(event) {
+    $("form#deluxepizzaForm").last().submit(function(event) {
         event.preventDefault();
+
         var inputtedName = $("#deluxepizzatype option:selected").val();
         var inputtedSize = $("#deluxesize option:selected").val();
         var inputtedCrust = $("#deluxecrust option:selected").val();
         var inputtedTopping = $("#deluxesize option:selected").val();
         var toppingName = $(".toppingsPizza option:Selected").val();
 
+        // Validation
+        if ((inputtedName == "0")) {
+            console.log("nothing selected");
+            alert("Please select pizza name");
+
+
+        } else if ((inputtedSize == "0")) {
+            console.log("nothing selected");
+            alert("Please select pizza size");
+
+
+        } else if ((inputtedCrust == "0")) {
+            console.log("nothing selected");
+            alert("Please select pizza crust");
+
+
+        } else if ((toppingName == "0")) {
+            console.log("nothing selected");
+            alert("Please select pizza topping");
+
+
+        } else {
+            $("#ordersMade").show(1000);
+        }
 
         switch (inputtedSize) {
             case 0:
@@ -189,14 +214,7 @@ $(document).ready(function() {
         }
 
 
-        if ((inputtedSize == "0") && (inputtedCrust == "0") && (toppingName == "0")) {
-            console.log("nothing selected");
-            alert("Please select pizza name, size and crust and extra");
 
-
-        } else {
-            $("#ordersMade").show(1000);
-        }
         total = price + crustPrice + toppingPrice;
         var checkoutTotal = 0;
         checkoutTotal = checkoutTotal + total;
@@ -230,10 +248,10 @@ $(document).ready(function() {
             '</td></tr>');
 
 
-        $("#deluxepizzatype").val("");
-        $("#deluxesize").val("");
-        $("#deluxecrust").val("");
-        $(".toppingsPizza").val("");
+        $("#deluxepizzatype").val("0");
+        $("#deluxesize").val("0");
+        $("#deluxecrust").val("0");
+        $(".toppingsPizza").val("0");
 
 
 
