@@ -158,59 +158,7 @@ $(document).ready(function() {
             $("#ordersMade").show(1000);
         }
 
-        // switch (inputtedSize) {
-        //     case 0:
-        //         price = 0;
-        //         break;
-        //     case "Mega":
-        //         price = 1200;
-        //         break;
-        //     case "Large":
-        //         price = 1000;
-        //         break;
-        //     case "Medium":
-        //         price = 800;
-        //         break;
-        //     case "small":
-        //         price = 550;
-        //     default:
-        //         console.log("error");
 
-        // }
-        // switch (inputtedCrust) {
-        //     case "0":
-        //         crustPrice = 0;
-        //         break;
-        //     case "Crispy":
-        //         crustPrice = 200;
-        //         break;
-        //     case "Stuffed":
-        //         crustPrice = 250;
-        //         break;
-        //     case "Gluten-free":
-        //         crustPrice = 180;
-        //         break;
-        //     default:
-        //         console.log("No price");
-        // }
-        // switch (inputtedTopping) {
-        //     case 0:
-        //         toppingPrice = 0;
-        //         break;
-        //     case "Mega":
-        //         toppingPrice = 250;
-        //         break;
-        //     case "Large":
-        //         toppingPrice = 200;
-        //         break;
-        //     case "Medium":
-        //         toppingPrice = 150;
-        //         break;
-        //     case "small":
-        //         toppingPrice = 100;
-        //     default:
-        //         console.log("error");
-        // }
 
 
 
@@ -220,19 +168,10 @@ $(document).ready(function() {
         console.log(checkoutTotal);
 
 
-        // $("#pizzaname").html($("#deluxepizzatype option:selected").val());
-        // $("#pizzasize").html($("#deluxesize option:selected").val());
-        // $("#pizzacrust").html($("#deluxecrust option:selected").val());
-        // $("#pizzatopping").html($(".toppingsPizza option:selected").val());
-        // $("#totals").html(total);
-        // constructor function
-        // let pizzaOrders = [];
-        // let pizzaOrderPrices = [];
-
 
         var newOrder = new OrderPizza(inputtedName, inputtedSize, inputtedCrust, toppingName, total);
         pizzaOrders.push(newOrder);
-        pizzaOrderPrices.push(newOrder.checkoutTotal);
+        pizzaOrderPrices.push(newOrder.getPizzaPrice());
         console.log(pizzaOrderPrices.reduce((a, b) => a + b, 0));
 
         // pizzaOrders.push(newOrder);
@@ -262,14 +201,28 @@ $(document).ready(function() {
     $("button#checkout").click(function() {
         $("button#checkout").hide();
         $("button.addPizza").hide();
+        $("form#deluxepizzaForm").hide();
         $("button.deliver").show(1000);
+        $("button.collect").show(1000);
         $("#addedprice").show(1000);
 
-        console.log("Your total bills is sh. " + checkoutTotal);
-        $("#pizzatotal").append("Your bill is sh. " + checkoutTotal);
+        totalCost = pizzaOrderPrices.reduce((a, b) => a + b, 0);
+
+        let costWithDelivery = totalCost + 250;
+        console.log(costWithDelivery);
+
+        console.log("Your total bills is sh. " + totalCost);
+        $("#pizzatotal").append("Your bill is sh. " + totalCost);
     });
 
+    $("button.collect").click(function() {
+        alert("Dear Customer your order will be ready in 30 minutes! Your order total is Ksh." + (totalCost) +
+            ".Kindly pick it up in good time.For any inquries you can reach us at 0792833436");
+        location.reload();
+    });
+    $("button.deliver").click(function() {
 
+    });
     // //classic pizza
     // $("#classicOrder").click(function() {
     //     $("#deluxeOrder").hide();

@@ -469,7 +469,6 @@
 
                         </div>
                         <button type="submit" class="btn" name="btn-submit" id="deluxepizza-btn-submit">Add to Cart</button>
-                        <button type="back" class="btn back">Back</button>
                     </form>
                 </div>
                 <!-- /deluxe  -->
@@ -552,7 +551,18 @@
                             <p id="finallmessage"></p>
                         </div>
                         <button class="btn" id="checkout">Checkout</button>
+                        <button class="btn collect">Collect</button>
                         <button class="btn deliver">Home delivery?</button>
+                    </div>
+                    <div class="delivery">
+                        <form method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                                <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
+                                <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+                                <button class="btn btn-orange" id="final-order">Place Order</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

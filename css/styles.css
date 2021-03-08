@@ -330,12 +330,13 @@ nav img {
 #regularToppings,
 .ordersMade,
 .deliver,
+.delivery,
 #addedprice {
     display: none;
 }
 
-.back {
-    float: right;
+.collect {
+    display: none;
 }
 
 @media screen and (max-height: 450px) {
