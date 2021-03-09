@@ -47,11 +47,11 @@ OUTPUTS
 INPUTS
 1. Name
 2. Mobile Phone Number
-3. Email
+3. Location
 
 BEHAVIOUR
 
-User inputs name,phone number and email then clicks on the submit button.On submit,validation is done first,then a message acknowledging the reciept of the message indicating the total price,and phone number is outputted as an alert.
+User inputs name,phone number and location then clicks on the submit button.On submit,validation is done first,then a message acknowledging the reciept of the message indicating the total price,and phone number is outputted as an alert.
 
 
 OUTPUTS
