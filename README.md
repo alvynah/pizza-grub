@@ -27,7 +27,36 @@ This is a pizza delivery website that allows a user to choose the type of pizza 
 4. JavaScript
 5. Markdown
 ## Behaviour Driven Development
+* ORDER PIZZA
 
+INPUTS
+1. Pizza name
+2. Pizza size
+3. Pizza Crust
+4. Pizza Toppings
+
+BEHAVIOUR
+User inputs the above inputs, on inputting pizza size, the toppings available for that size are provided in a drop down list where the select. Once everything has been filled, their items are added to a cart table.when they finish shopping they checkout the cart and their total bill is provided for them.
+
+OUTPUTS
+1. Total bill.
+
+
+* REQUEST PIZZA DELIVERY
+
+INPUTS
+1. Name
+2. Mobile Phone Number
+3. Email
+
+BEHAVIOUR
+
+User inputs name,phone number and email then clicks on the submit button.On submit,validation is done first,then a message acknowledging the reciept of the message indicating the total price,and phone number is outputted as an alert.
+
+
+OUTPUTS
+1. Message
+output string -> Hello (Name) .We have recieved your order and it will be delivered to at: (location) in the next one hour .Our rider will call you on Tel: (MObile phone number) as you provide. Enjoy the deliciousness!!"
 ## Contact Information
 For any further inquiries or contributions or comments, reach me at [Alvynah](juvatalvynah@gmail.com)
 ### License
