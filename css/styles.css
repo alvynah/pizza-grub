@@ -375,6 +375,9 @@ nav img {
     .sidenav a {
         font-size: 18px;
     }
+}
+
+@media screen and (min-width:768px) {
     #head h1 {
         text-align: center;
         font-size: 50px;
@@ -388,5 +391,9 @@ nav img {
         border: none;
         border-bottom: 2px solid;
         border-radius: 20px;
+    }
+    #aboutGif {
+        width: 100px;
+        height: 100px;
     }
 }
