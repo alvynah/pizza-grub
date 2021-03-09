@@ -223,11 +223,25 @@ $(document).ready(function() {
         var inputtedNameContact = $("#name").val();
         var inputtedPhoneContact = $("#phone").val();
         var inputtedLocationContact = $("#location").val();
+        // Validation
+        if ((inputtedNameContact == "")) {
+            alert("Please enter your name");
 
+            return false;
 
-        alert("Hello " + (inputtedNameContact) + ".We have recieved your order and it will be delivered to at: " + (inputtedLocationContact) + " in the next one hour .Our rider will call you on Tel: " + (inputtedPhoneContact) + " as you provide. Enjoy the deliciousness!!");
-        console.log("run");
-        location.reload();
+        } else if ((inputtedPhoneContact == "")) {
+            alert("Please enter your phone number");
+            return false;
+
+        } else if ((inputtedLocationContact == "")) {
+            alert("Please enter your location");
+            return false;
+        } else {
+
+            alert("Hello " + (inputtedNameContact) + ".We have recieved your order and it will be delivered to at: " + (inputtedLocationContact) + " in the next one hour .Our rider will call you on Tel: " + (inputtedPhoneContact) + " as you provided. Enjoy the deliciousness!!");
+            console.log("run");
+            location.reload();
+        };
     });
 
 
