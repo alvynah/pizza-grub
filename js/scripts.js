@@ -103,23 +103,32 @@ $(document).ready(function() {
         event.preventDefault();
 
         var selectedDeluxeSize = $("#deluxesize option:selected").val();
-        $("#deluxetoppings").slideDown(100);
+
+
         if (selectedDeluxeSize == "Mega") {
 
             $("#deluxetoppings").empty();
             $("#deluxetoppings").append('<label for = "mega" >  Select Extra Toppings at Ksh 250 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3 toppingsPizza" id="mega" required>' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+            $("#deluxetoppings").slideDown(100);
+
 
         } else if (selectedDeluxeSize == "Large") {
 
             $("#deluxetoppings").empty();
             $("#deluxetoppings").append('<label for = "large" >  Select Extra Toppings at Ksh 200 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3 toppingsPizza"" id="large" required>' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+            $("#deluxetoppings").slideDown(100);
+
         } else if (selectedDeluxeSize == "Medium") {
             $("#deluxetoppings").empty();
             $("#deluxetoppings").append('<label for = "medium" >  Select Extra Toppings at Ksh 150 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3 toppingsPizza" " id="medium" required>' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+            $("#deluxetoppings").slideDown(100);
+
 
         } else if (selectedDeluxeSize == "Regular") {
             $("#deluxetoppings").empty();
             $("#deluxetoppings").append('<label for = "regular" >  Select Extra Toppings at Ksh 100 only! </label>' + '<select class="browser-default custom-select custom-select-md mb-3 toppingsPizza"" id="regular" required>' + '<option selected value = "0" > Select extra toppings! </option>' + '<option value = "Bacon" > Bacon </option>' + '<option value = "Extra Chicken" > Extra Chicken </option>' + '<option value = "Extra Onions" > Extra Onions </option> ' + '</select>');
+            $("#deluxetoppings").slideDown(100);
+
         } else {
             return false;
         };
