@@ -99,7 +99,7 @@ $(document).ready(function() {
         event.preventDefault();
         $("#deluxetoppings").hide();
     })
-    $("#deluxesize").last().click(function(event) {
+    $("#deluxesize").click(function(event) {
         event.preventDefault();
 
         var selectedDeluxeSize = $("#deluxesize option:selected").val();
