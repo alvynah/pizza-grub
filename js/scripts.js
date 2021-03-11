@@ -95,16 +95,13 @@ $(document).ready(function() {
         $("#deluxepizzaForm").slideDown(1000);
     });
 
+
     $("#deluxesize").change(function(event) {
         event.preventDefault();
-        $("#deluxetoppings").hide();
-    })
-    $("#deluxesize").click(function(event) {
-        event.preventDefault();
+        $("#deluxetoppings").slideDown(1000);
 
         var selectedDeluxeSize = $("#deluxesize option:selected").val();
 
-        $("#deluxetoppings").slideDown(1000);
 
         if (selectedDeluxeSize == "Mega") {
 
